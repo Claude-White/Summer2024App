@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 60;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,6 +21,36 @@
 		14EAEE9E2C21D305005B1419 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		14C358D32C3E2A7100D29F3C /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				MovieDetails.swift,
+			);
+			target = 14EAEE932C21D304005B1419 /* SummerProject */;
+		};
+		14C358D72C3E2AF000D29F3C /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				FetchData.swift,
+			);
+			target = 14EAEE932C21D304005B1419 /* SummerProject */;
+		};
+		14C358DA2C3E2DDA00D29F3C /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Movie.swift,
+			);
+			target = 14EAEE932C21D304005B1419 /* SummerProject */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		14C358C92C3DF5AC00D29F3C /* Models */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (14C358DA2C3E2DDA00D29F3C /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Models; sourceTree = "<group>"; };
+		14C358CF2C3E290500D29F3C /* Movies */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (14C358D32C3E2A7100D29F3C /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Movies; sourceTree = "<group>"; };
+		14C358D42C3E2ADD00D29F3C /* API */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (14C358D72C3E2AF000D29F3C /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = API; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		14EAEE912C21D304005B1419 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -32,6 +62,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14C358CA2C3DF5B700D29F3C /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				14EAEE992C21D304005B1419 /* ContentView.swift */,
+				14C358CF2C3E290500D29F3C /* Movies */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		14EAEE8B2C21D304005B1419 = {
 			isa = PBXGroup;
 			children = (
@@ -52,7 +91,9 @@
 			isa = PBXGroup;
 			children = (
 				14EAEE972C21D304005B1419 /* SummerProjectApp.swift */,
-				14EAEE992C21D304005B1419 /* ContentView.swift */,
+				14C358D42C3E2ADD00D29F3C /* API */,
+				14C358CA2C3DF5B700D29F3C /* Views */,
+				14C358C92C3DF5AC00D29F3C /* Models */,
 				14EAEE9B2C21D305005B1419 /* Assets.xcassets */,
 				14EAEE9D2C21D305005B1419 /* Preview Content */,
 			);
