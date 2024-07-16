@@ -20,7 +20,7 @@ struct Movie: Codable {
     var voteAverage: Double
     var voteCount: Int
     var budget: Int
-    var belongsToCollection: MovieCollection
+    var belongsToCollection: MovieCollection?
     var homepage: String
     var genres: [Genre]
     var adult: Bool

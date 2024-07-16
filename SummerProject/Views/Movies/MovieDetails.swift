@@ -17,16 +17,30 @@ struct MovieDetails: View {
             if isLoading {
                 ProgressView()
             } else if let movie = movie {
-                VStack(alignment: .center, spacing: 10) {
+                VStack(alignment: .leading, spacing: 10) {
                     Text(movie.title)
                         .font(.title)
-                    AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/original/\(movie.posterPath)"), scale: 1) { image in
-                        image.resizable().aspectRatio(contentMode: .fit)
+                    AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/original/\(movie.backdropPath)"), scale: 1) { image in
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
                     } placeholder: {
-                        ProgressView().background(Color.gray)
+                        ProgressView()
                     }
-                    .cornerRadius(15)
-                    .frame(width: 200, height: 300)
+                    ZStack {
+                        AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/original/\(movie.posterPath)"), scale: 1) { image in
+                            image.resizable().aspectRatio(contentMode: .fit)
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        .cornerRadius(15)
+                        .frame(width: 125)
+                    }
+                    ZStack {
+                        CircleProgress(progress: movie.voteAverage * 0.1)
+                        Text("\(round(movie.voteAverage * 10).formatted())")
+                    }
+
                     Text(movie.overview)
                         .font(.body)
                 }
@@ -47,9 +61,10 @@ struct MovieDetails: View {
 
         let dataFetcher = FetchData()
         do {
-            movie = try await dataFetcher.getMovieDetails(movieId: 519182)
+            movie = try await dataFetcher.getMovieDetails(movieId: 519182) // 987686 - 519182 - 1214509
         } catch {
             errorMessage = error.localizedDescription
+            print("Detailed error: \(error)")
         }
     }
 }

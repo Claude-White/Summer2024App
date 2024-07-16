@@ -7,11 +7,8 @@
 
 import Foundation
 
-import Foundation
-
 class FetchData {
     func getMovieDetails(movieId: Int) async throws -> Movie {
-        print(movieId)
         guard let url = URL(string: "https://api.themoviedb.org/3/movie/\(movieId)") else {
             throw URLError(.badURL)
         }

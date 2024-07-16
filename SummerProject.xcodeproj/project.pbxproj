@@ -43,12 +43,20 @@
 			);
 			target = 14EAEE932C21D304005B1419 /* SummerProject */;
 		};
+		14F39CE52C40CA230008A329 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				CircleProgress.swift,
+			);
+			target = 14EAEE932C21D304005B1419 /* SummerProject */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		14C358C92C3DF5AC00D29F3C /* Models */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (14C358DA2C3E2DDA00D29F3C /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Models; sourceTree = "<group>"; };
 		14C358CF2C3E290500D29F3C /* Movies */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (14C358D32C3E2A7100D29F3C /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Movies; sourceTree = "<group>"; };
 		14C358D42C3E2ADD00D29F3C /* API */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (14C358D72C3E2AF000D29F3C /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = API; sourceTree = "<group>"; };
+		14F39CE22C40C9FB0008A329 /* Helpers */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (14F39CE52C40CA230008A329 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Helpers; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +75,7 @@
 			children = (
 				14EAEE992C21D304005B1419 /* ContentView.swift */,
 				14C358CF2C3E290500D29F3C /* Movies */,
+				14F39CE22C40C9FB0008A329 /* Helpers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
